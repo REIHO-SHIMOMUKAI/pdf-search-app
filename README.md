@@ -10,6 +10,9 @@ A web application that allows you to upload PDF and search their contents by tex
 
 PDF Upload、PDF Search、PDF Listの3つの項目があります。
 
+![App](<img width="1909" height="926" alt="スクリーンショット 2026-04-27 205045" src="https://github.com/user-attachments/assets/4b55950a-eaa6-4685-90ee-cb3a311936f7" />
+)
+
 1. PDF Upload
    - PDFをUploadすると、PDF Listに追加されます。 / When you upload a PDF, it will be added to the PDF List.
 
