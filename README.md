@@ -29,17 +29,21 @@ PDF Upload、PDF Search、PDF Listの3つの項目があります。
 
 
 ## 実行方法 / How to run
-1. ターミナルで以下を実行 / Execute the following command on Terminal
+1. flaskとpdfplumberをインストールする / Install flask and pdfplumber
+```
+pip install flask pdfplumber
+```
+2. アプリを実行 / Run the app
 ```
 python app.py
 ```
-2. ブラウザを開き、以下にアクセスする / Open browser and access below URL
+3. ブラウザを開き、以下にアクセスする / Open browser and access below URL
 ```
 http://localhost:5000/
 ```
 
 ## データベースの確認方法 / How to check the database
-ターミナルで以下を実行 / Execute the following command on Terminal
+以下コマンドを実行 / Execute the following command
 ```
 python db_show.py
 ```
