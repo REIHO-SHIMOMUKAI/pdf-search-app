@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>PDF Reader</title>
+</head>
+<body>
+
+<!-- アップロード -->
+<h2>PDF Upload</h2>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" id="pdf" name="pdf" accept=".pdf" required>
+    <button type="submit" class="btn">Upload PDF</button>
+</form>
+
+<hr>
+
+<!-- 検索フォーム -->
+<h2>PDF Search</h2>
+<form method="get" action="/">
+    <input type="text" name="q" value="{{ keyword }}" placeholder="Search text">
+    <button type="submit" class="btn">Search</button>
+</form>
+
+<hr>
+
+<!-- 一覧表示 -->
+<h2>PDF List</h2>
+
+<table class="pdf-table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>File Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for row in rows %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ row[1] }}</td>
+            <td>
+                <a href="/view/{{ row[0] }}?q={{ keyword }}" class="btn">Open</a>
+
+                <form action="/delete/{{ row[0] }}" method="post" style="display:inline;">
+                    <button type="submit" class="btn delete">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

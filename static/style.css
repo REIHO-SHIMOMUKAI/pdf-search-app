@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    margin-top: 10px;
+}
+.btn {
+    margin-right: 5px;
+    display: inline-block;
+    padding: 1px 10px;
+    background-color: dodgerblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.btn.delete {
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity:0.8;
+}
+
+.pdf-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pdf-table th,
+.pdf-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.pdf-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.pdf-table tr:hover {
+    background-color: #f9f9f9;
+}
